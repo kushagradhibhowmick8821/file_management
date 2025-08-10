@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for(filename='styles.css') }}" />
+    <title>File Upload and Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Upload and Management</h1>
+
+      <!-- File Upload Form -->
+      <form action="/uploads" method="post" enctype="multipart/form-data">
+        <label for="file">Select a File to Upload:</label>
+        <input type="file" name="file" id="file" accept="*" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <!-- List of Uploaded Files -->
+      <h2>Uploaded Files:</h2>
+      <ul>
+        {% for file in files %}
+        <li>
+          <a href="/download/{{ file }}" download="{{ file }}">{{ file }}</a>
+          <form action="/delete" method="post" class="delete-form">
+            <input type="hidden" name="filename" value="{{ file }}" />
+            <input
+              type="password"
+              class="password-input"
+              name="password"
+              placeholder="Enter Password"
+            />
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>

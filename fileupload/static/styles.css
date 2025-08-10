@@ -1,0 +1,205 @@
+/* Reset some default browser styles */
+body,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set dark background color and light text */
+body {
+  background-image: url("https://images.hdqwalls.com/wallpapers/material-style-8k-rk.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* White text color */
+  font-family: Arial, sans-serif; /* Default font family */
+}
+/* Style the file input label when no file is selected */
+input[type="file"] + label::before {
+  content: "Choose File"; /* Set the label text */
+  background-color: #333; /* Dark gray background for the label */
+  color: #9754cb; /* White text color for the label */
+  padding: 5px;
+  border: 1px solid #666; /* Dark gray border for the label */
+  border-radius: 20px; /* Rounded corners */
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+/* Style the file input */
+input[type="file"] {
+  margin-bottom: 10px;
+  /* background-color:#4c495d; /* Dark gray background for the file input */
+  background: rgba(255, 255, 255, 0.2);
+  color: #deacf5; /* White text color for the file input */
+  padding: 10px;
+  margin-bottom: 0px;
+  border: 1px solid #666; /* Dark gray border */
+  border-radius: 20px; /* Rounded corners */
+  margin-top: 0px;
+  width: 50%;
+}
+
+/* Style the file input button */
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #4c495d; /* Dark gray background for the button part of the file input */
+
+  color: #b48da8; /* White text color for the button part */
+  margin-bottom: 0px;
+  padding: 10px;
+  border: 1px solid #666; /* Dark gray border for the button part */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+/* Remove default button styles in some browsers */
+input[type="file"]::-webkit-file-upload-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove box shadow */
+}
+
+/* Style the file input button in Firefox */
+input[type="file"]::-moz-file-upload-button {
+  background-color: #333; /* Dark gray background for the button part of the file input in Firefox */
+  color: #fff; /* White text color for the button part in Firefox */
+  padding: 10px;
+  border: 1px solid #666; /* Dark gray border for the button part in Firefox */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Hide the default button text */
+input[type="file"]::-webkit-file-upload-button {
+  color: transparent; /* Hide text in WebKit browsers (Chrome, Safari, etc.) */
+  font-size: 0; /* Set font size to zero */
+}
+
+/* Hide the default button text in Firefox */
+input[type="file"]::-moz-file-upload-button {
+  color: transparent; /* Hide text in Firefox */
+  font-size: 0; /* Set font size to zero */
+  margin-top: 1em;
+}
+
+/* Add a glass-like background to the container */
+.container {
+  max-width: 800px; /* Limit the container width */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Add spacing around content */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background for the glass effect */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Style headings with light text */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  color: #9754cb; /* White text color */
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #9754cb; /* White text color */
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+/* Style the file upload form */
+form {
+  margin-top: 15px;
+}
+/* Style the label for the file input */
+label[for="file"] {
+  color: #9754cb; /* Change the color to your desired color (in this case, a shade of orange) */
+  border-radius: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #9754cb; /* White text color */
+  border-radius: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+button[type="submit"] {
+  background-color: #4a148c; /* Purple upload button */
+  color: #d2afea; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Rounded corners */
+}
+
+button[type="submit"]:hover {
+  background-color: #fbcea0; /* Darker purple on hover */
+}
+
+/* Style the list of uploaded files */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  border: 1px solid #333; /* Dark gray border for each file */
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Semi-transparent white background for files */
+  backdrop-filter: blur(5px); /* Apply a blur effect to file backgrounds */
+  border-radius: 11px; /* Rounded corners */
+  color: #ffffff; /* White text color for file names */
+}
+/* Style the embedded file links */
+ul li a {
+  color: #addfee; /* Change the color to your desired color (in this case, a shade of orange) */
+  text-decoration: none; /* Remove underlines from links */
+  font-family: Arial, sans-serif; /* Change the font to your desired font-family */
+}
+/* Style the password input field */
+.password-input {
+  background-color: transparent; /* Transparent background for the password input */
+  color: #fff; /* White text color for the password input */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 20px; /* Rounded corners */
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+/* Style the delete button with a red color */
+.delete-button {
+  background-color: #db4437; /* Google red delete button */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px; /* Rounded corners */
+  margin-left: 15px;
+}
+
+.delete-button:hover {
+  background-color: #c53929; /* Darker red on hover */
+}
